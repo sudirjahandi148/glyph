@@ -65,9 +65,9 @@
 
     open.addEventListener('click', () => {
       const s = GlyphAI.getSettings();
-      document.getElementById('mimo-key').value = s.key;
-      document.getElementById('mimo-endpoint').value = s.endpoint;
-      document.getElementById('mimo-enabled').checked = s.enabled;
+      document.getElementById('ai-key').value = s.key;
+      document.getElementById('ai-endpoint').value = s.endpoint;
+      document.getElementById('ai-enabled').checked = s.enabled;
       modal.removeAttribute('hidden');
     });
 
@@ -77,9 +77,9 @@
 
     save.addEventListener('click', () => {
       GlyphAI.saveSettings({
-        key: document.getElementById('mimo-key').value.trim(),
-        endpoint: document.getElementById('mimo-endpoint').value.trim(),
-        enabled: document.getElementById('mimo-enabled').checked,
+        key: document.getElementById('ai-key').value.trim(),
+        endpoint: document.getElementById('ai-endpoint').value.trim(),
+        enabled: document.getElementById('ai-enabled').checked,
       });
       modal.setAttribute('hidden', '');
     });

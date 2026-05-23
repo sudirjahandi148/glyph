@@ -90,21 +90,21 @@
   <div class="settings-modal__backdrop" data-close></div>
   <div class="settings-modal__panel">
     <div class="settings-modal__head">
-      <h3>MiMo composition</h3>
+      <h3>AI composition</h3>
       <button class="btn-icon" data-close>×</button>
     </div>
     <div class="settings-modal__body">
       <label>API Key
-        <input type="password" id="mimo-key" placeholder="sk-...">
+        <input type="password" id="ai-key" placeholder="sk-...">
       </label>
       <label>Endpoint
-        <input type="text" id="mimo-endpoint" value="https://token-plan-sgp.xiaomimimo.com">
+        <input type="text" id="ai-endpoint" value="https://token-plan-sgp.xiaomimimo.com">
       </label>
       <label class="check-row">
-        <input type="checkbox" id="mimo-enabled">
-        <span>Enable MiMo composition (richer prompts)</span>
+        <input type="checkbox" id="ai-enabled">
+        <span>Enable AI composition (richer prompts)</span>
       </label>
-      <div class="settings-modal__note">Without MiMo, GLYPH uses keyword-based rule composer.</div>
+      <div class="settings-modal__note">Without AI, GLYPH uses keyword-based rule composer.</div>
     </div>
     <div class="settings-modal__foot">
       <button class="btn-orange" id="settings-save">Save</button>
@@ -115,7 +115,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__brand">GLYPH</div>
-    <div class="footer__text">Composes SVG from a primitive library. AI mode uses MiMo to map prompts; without AI, rule-based keyword matching. No raster generation.</div>
+    <div class="footer__text">Composes SVG from a primitive library. AI mode uses AI to map prompts; without AI, rule-based keyword matching. No raster generation.</div>
     <div class="footer__meta">MIT · vanilla JS · no backend</div>
   </div>
 </footer>

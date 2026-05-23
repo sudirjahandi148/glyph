@@ -1,4 +1,4 @@
-// ai.js — MiMo composition (returns SVG-friendly spec)
+// ai.js — AI composition (returns SVG-friendly spec)
 
 (function () {
   'use strict';
@@ -41,7 +41,7 @@ Output JSON only, no commentary, no markdown fence.`;
           Authorization: `Bearer ${settings.key}`,
         },
         body: JSON.stringify({
-          model: 'mimo-v2.5-pro',
+          model: 'ai-v2.5-pro',
           messages: [
             { role: 'system', content: 'You compose SVG icons from a primitive library. Output JSON only.' },
             { role: 'user', content: aiPrompt },
@@ -50,7 +50,7 @@ Output JSON only, no commentary, no markdown fence.`;
           max_tokens: 600,
         }),
       });
-      if (!res.ok) throw new Error('mimo failed: ' + res.status);
+      if (!res.ok) throw new Error('ai failed: ' + res.status);
       const json = await res.json();
       const text = json.choices?.[0]?.message?.content || '';
       const match = text.match(/\{[\s\S]*\}/);
